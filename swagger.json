@@ -5,15 +5,17 @@
     "description": "This is the API documentation for the CSE341 Project. It provides information about the available endpoints, request parameters, and response formats.",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "https://cse340-3fas.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https",
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
       "get": {
+        "tags": [
+          "Hello World"
+        ],
         "description": "",
         "responses": {
           "200": {
@@ -24,7 +26,10 @@
     },
     "/contacts/": {
       "get": {
-        "description": "",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Endpoint to get all contacts",
         "responses": {
           "200": {
             "description": "OK"
@@ -35,7 +40,10 @@
         }
       },
       "post": {
-        "description": "",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Endpoint to create a new contact",
         "parameters": [
           {
             "name": "body",
@@ -80,7 +88,10 @@
     },
     "/contacts/{id}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Endpoint to get a contact by ID",
         "parameters": [
           {
             "name": "id",
@@ -102,7 +113,10 @@
         }
       },
       "put": {
-        "description": "",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Endpoint to update a contact by ID",
         "parameters": [
           {
             "name": "id",
@@ -151,7 +165,10 @@
         }
       },
       "delete": {
-        "description": "",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Endpoint to delete a contact by ID",
         "parameters": [
           {
             "name": "id",
@@ -166,16 +183,6 @@
           },
           "500": {
             "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
           }
         }
       }

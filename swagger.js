@@ -6,7 +6,7 @@ const doc = {
     description: 'This is the API documentation for the CSE341 Project. It provides information about the available endpoints, request parameters, and response formats.',
   },
   host: 'localhost:8080',
-  schemes: ['https','http'],
+  schemes: ['http','https'],
 };
 
 const outputFile = './swagger.json';

@@ -3,8 +3,8 @@ import { ObjectId } from 'mongodb';
 
 
 const getAllContacts = async (req, res) => {
-  //$swagger.tags = ['Contacts'];
-  //$swagger.description = 'Endpoint to get all contacts';
+  // #swagger.tags = ['Contacts'];
+  // #swagger.description = 'Endpoint to get all contacts';
   try {
     const db = getDb();
     const users = await db.collection('contacts').find().toArray();
@@ -16,8 +16,8 @@ const getAllContacts = async (req, res) => {
 };
 
 const getContactById = async (req, res) => {
-  //$swagger.tags = ['Contacts'];
-  //$swagger.description = 'Endpoint to get a contact by ID';
+  // #swagger.tags = ['Contacts'];
+  // #swagger.description = 'Endpoint to get a contact by ID';
   const contactId = req.params.id;
   try {
     const db = getDb();
@@ -33,8 +33,8 @@ const getContactById = async (req, res) => {
 };
 
 const createUser = async (req, res) => {
-  //$swagger.tags = ['Contacts'];
-  //$swagger.description = 'Endpoint to create a new contact';
+  // #swagger.tags = ['Contacts'];
+  // #swagger.description = 'Endpoint to create a new contact';
   try{
     const contact = {
       name: req.body.name,
@@ -57,8 +57,8 @@ const createUser = async (req, res) => {
 };
 
 const updateUser = async (req, res) => {
-  //$swagger.tags = ['Contacts'];
-  //$swagger.description = 'Endpoint to update a contact by ID';
+  // #swagger.tags = ['Contacts'];
+  // #swagger.description = 'Endpoint to update a contact by ID';
   try {
     const contactId = new ObjectId(req.params.id);
     const updatedContact = {
@@ -82,8 +82,8 @@ const updateUser = async (req, res) => {
 };
 
 const deleteUser = async (req, res) => {
-  //$swagger.tags = ['Contacts'];
-  //$swagger.description = 'Endpoint to delete a contact by ID';
+  // #swagger.tags = ['Contacts'];
+  // #swagger.description = 'Endpoint to delete a contact by ID';
   try {
     const contactId = new ObjectId(req.params.id);
     const response = await getDb().collection('contacts').deleteOne({ _id: contactId });
